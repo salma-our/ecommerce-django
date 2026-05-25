@@ -1,0 +1,57 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+
+<section class="bg-dark text-white p-5">
+    <div class="container">
+
+        <h1 class="display-4 fw-bold">
+            Découvrez notre collection tendance
+        </h1>
+
+        <p class="lead">
+            Bijoux et accessoires élégants en acier inoxydable.
+        </p>
+
+        <a href="/products/" class="btn btn-light btn-lg">
+            Explorer les produits
+        </a>
+
+    </div>
+</section>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Produits populaires
+    </h2>
+
+    <div class="row">
+
+        {% for product in products %}
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow-sm h-100">
+
+                <img src="{{ product.image.url }}" class="card-img-top">
+
+                <div class="card-body text-center">
+
+                    <h5>{{ product.name }}</h5>
+
+                    <p>{{ product.price }} DH</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

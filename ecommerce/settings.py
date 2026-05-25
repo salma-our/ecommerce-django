@@ -49,7 +49,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,7 +74,7 @@ DATABASES = {
         'USER': os.environ.get('MYSQL_USER'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
         'HOST': os.environ.get('MYSQL_HOST', 'db'),
-        'PORT': os.environ.get('MYSQL_PORT', '3306'),
+        'PORT': os.environ.get('MYSQL_PORT', '3307'),
         'OPTIONS': {
             'charset': 'utf8mb4',
         }

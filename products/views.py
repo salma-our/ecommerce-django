@@ -2,6 +2,17 @@ from django.shortcuts import render
 from .models import Product
 
 
+def home(request):
+    products = Product.objects.all()[:6]
+    return render(request, 'products/home.html', {
+        'products': products
+    })
+
+
+def cart(request):
+    return render(request, 'products/cart.html')
+
+
 def product_list(request):
 
     products = Product.objects.all()
