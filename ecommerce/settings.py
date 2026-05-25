@@ -73,14 +73,10 @@ DATABASES = {
         'NAME': os.environ.get('MYSQL_DATABASE'),
         'USER': os.environ.get('MYSQL_USER'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-        'HOST': os.environ.get('MYSQL_HOST', 'db'),
-        'PORT': os.environ.get('MYSQL_PORT', '3307'),
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-        }
+        'HOST': 'db',
+        'PORT': '3307',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
