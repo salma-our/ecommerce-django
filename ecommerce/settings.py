@@ -74,7 +74,7 @@ DATABASES = {
         'USER': os.environ.get('MYSQL_USER'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
         'HOST': 'db',
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 # Password validation
